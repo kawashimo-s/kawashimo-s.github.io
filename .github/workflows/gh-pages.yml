@@ -34,7 +34,7 @@ jobs:
         run: mkdir -p ./dist
 
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
+        run: npx tailwindcss -i ./src/input.css -o ./dist/src/output.css --minify
 
       - name: Copy index.html
         run: cp ./index.html ./dist/index.html
