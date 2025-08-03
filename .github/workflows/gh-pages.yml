@@ -21,10 +21,13 @@ jobs:
         run: npm ci
 
       - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./src/input.css -o ./src/output.css --minify
+        run: npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify
+
+      - name: Copy index.html
+        run: cp ./index.html ./dist/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./dist
