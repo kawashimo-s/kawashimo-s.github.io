@@ -44,6 +44,7 @@ jobs:
 
       - name: Copy static files
         run: |
+          mkdir -p ./src/dist
           cp ./dist/output.css ./src/dist/output.css
           cp ./index.html ./src/index.html
 

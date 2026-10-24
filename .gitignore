@@ -5,9 +5,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Tailwind CSS output
-src/output.css
-
 # VSCode
 .vscode/
 
@@ -15,3 +12,4 @@ src/output.css
 .github/*.log
 
 dist/output.css
+src/dist/
